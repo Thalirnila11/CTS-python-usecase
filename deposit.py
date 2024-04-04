@@ -20,6 +20,13 @@ class BankAccount:
 
     def check_balance(self):
         return f"Your current balance is ${self.balance}."
+    def view_transaction_history(self):
+        if self.transaction_history:
+            print("Transaction History:")
+            for transaction in self.transaction_history:
+                print(transaction)
+        else:
+            print("No transaction history.")
 
 # Example usage
 if __name__ == "__main__":
@@ -29,3 +36,4 @@ if __name__ == "__main__":
     withdrawal_amount = float(input("Enter the amount to withdraw: "))
     print(account.withdraw(withdrawal_amount))
     print(account.check_balance())
+    account.view_transaction_history()
