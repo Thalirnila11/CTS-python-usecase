@@ -18,6 +18,9 @@ class BankAccount:
             else:
                 return "Invalid withdrawal amount."
 
+    def check_balance(self):
+        return f"Your current balance is ${self.balance}."
+
 # Example usage
 if __name__ == "__main__":
     account = BankAccount()
@@ -25,3 +28,4 @@ if __name__ == "__main__":
     print(account.deposit(amount))
     withdrawal_amount = float(input("Enter the amount to withdraw: "))
     print(account.withdraw(withdrawal_amount))
+    print(account.check_balance())
